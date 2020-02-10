@@ -1,42 +1,87 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
    <head>
-   <title >
-   only-tao
-   </title>
-   <style>
-   p{
-        text-indent:2em;
-   }
-   #to-top{
-       position: fixed;
-       right: 60px;
-       bottom: 60px;
-   }
-   a {text-decoration: none;}
-   #csdn{
-      font-style: italic;
-      color: red;
-   }
-   #B{
-      color: dodgerblue;
-   }
-   body{
-      font-family: Georgia, 'Times New Roman', Times, serif ;
-   }
-   #top{
-      text-align: center;
-      background-color: coral;
-      color:cornsilk;
-   }
-   #body{
+      <title>
+      only-tao
+      </title>
+      <style>
+      p{
+           text-indent:2em;
+      }
+      #to-top{
+          position: fixed;
+          right: 60px;
+          bottom: 60px;
+      }
+      a {text-decoration: none;}
+      #csdn{
+         font-style: italic;
+         color: red;
+      }
+      #B{
+         color: dodgerblue;
+      }
+      body{
+         margin: 0px;
+         font-family: Georgia, 'Times New Roman', Times, serif ;
+      }
+      #top{
+         text-align: center;
+         color:cornsilk;
+      }
+      #body{
+   
+      }
+      header{
+         
+         width: 100%;
+         height: 50px;
 
-   }
-   </style>
-   </head>
+      }
+      #headline{
+         background-color: coral;
+      }
+      #welcome{
+         width: 75%;
+         margin: 0px auto;
+         /*!在设定宽度的地方在设定margin：auto*/
+      }
+      nav ul{
+         list-style: none;
+         margin: 1px;
+      }
+      nav ul li{
+         position: relative;
+         left: 80px;
+         float: left;
+         width: auto;
+
+         padding: 3px;
+
+         border-radius: 7px;
+         border: 1.5px solid deepskyblue;
+      }/*练一下属性选择器*/
+      [href="index.html"]{
+         color: deepskyblue;
+      }
+      [href="text.html"]{
+         color: deepskyblue;
+      }
+      </style>
+      </head>
    <body>
    <header>
       <div id="top">
-      <h3> Welcome to my own website</h3>
+         <div id="headline">
+         <h3 id="welcome"> Welcome to my own website</h3>
+         </div>
+         <nav>
+            <ul>
+               <li><a href="index.html">首页</a></li>
+               <li><a href="text.html">我的练习</a></li>
+            </ul>
+         </nav> 
       </div>
    </header>
    <div id="body">
@@ -53,7 +98,7 @@
          </div>
          <li><a href="https://space.bilibili.com/290740114" id="B">B站</a>在这，目前这里有我学习的一些关于Arduino的视频。</li>
       </ul>
-         <p> 虽然我的网站现在还是很简陋，但是我正在努力的学习来使它变得更好。 </p>
+         <!-- <p> 虽然我的网站现在还是很简陋，但是我正在努力的学习来使它变得更好。 </p> -->
          <p>就比如现在，我的html目前派上一点用场了。在我学习完html、css与javascript后，
           这里一定会变得更不错的，cheer up！
          </p>
@@ -63,36 +108,5 @@
              <a href="#top"><img src="http://q5604i1mx.bkt.clouddn.com/rocket1.png" alt="小火箭" width="50px"></a>
          </div>
    </aside>
-      <h3>以下为练习html</h3>
-     <p>左百度，右谷歌,左下⚪github</p>
-     <img src="https://images.iskysoft.com/mac-pdf-creator/topic/smallpdf.jpg" width="200px" usemap="#list"></img>
-    <map name="list">
-        <area href="http:/www.baidu.com" shape="rect" coords="0,0,75,75" target="_blank">
-        <area href="https://www.google.com.hk/?gws_rd=ssl" shape="rect" coords="75,0,150,75" target="_blank">
-        <area href="https://github.com/" shape="circle" coords="35,100,35" target="_blank">
-    </map>
-    <h3>搜索引擎👇<h3>
-      <!-- 百度 -->
-   <a href="http:/www.baidu.com"  target="_blank">
-   <img src="https://newsd.in/wp-content/uploads/2018/10/15204aff56c880242a84636fccae4a7e.jpg" alt="baidu" width="45px" > </img>
-   </a>
-   <!-- google -->
-   <a href="https://www.google.com.hk/?gws_rd=ssl" target="_blank">
-    <img src="https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_640.png" 
-        alt="google" width="65px" >
-    </a>
-    <!-- stackoverflow -->
-    <a href="https://stackoverflow.com/" target="_blank">
-       <img src="https://cn.bing.com/th?id=OIP.Q5lKtkMocDyeZWsE5naZRwHaBr&pid=Api&rs=1" width="120px">
-    </a>
-    <!-- github -->
-    <a href="https://github.com/" target="_blank">
-      <img src="https://cn.bing.com/th?id=OIP.ZhKU9avG-1iwj928kXLpSAHaD4&pid=Api&rs=1" width="80px">
-   </a>
-   <p>insert second</p>
-   <p>third</p>
-   
-   <video src="https://www.bilibili.com/video/av5862916/" controls preload="auto"></video>
-   <video src="https://www.bilibili.com/video/av5862916/" controls preload="metadata" poster="D:\Desktop\html\tencent.PNG" width="500px"></video>
 </body>
 </html>
