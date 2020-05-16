@@ -1,2 +1,1 @@
-# Happy-Snake
-Gluttonous Snake
+snake
