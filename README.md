@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: What I do ? 
-tagline: test tagline.
+heroText: What I do today? 
+tagline: something interesting.
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

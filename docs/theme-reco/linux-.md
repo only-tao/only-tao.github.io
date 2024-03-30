@@ -297,6 +297,9 @@ git submodule add /path/to/sub_module1
 # or git submodule add https://github.com/example/sub_project
 #git submodule add /path/to/sub_module2
 git submodule update
+
+#删除分支
+git branch -d local_branch_name
 ```
 
 

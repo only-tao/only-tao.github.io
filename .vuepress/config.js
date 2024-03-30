@@ -1,6 +1,6 @@
 module.exports = {
   "title": "blog-test-reco-self",
-  "description": "test-recoooooo",
+  "description": "test",
   "dest": "public",
   "head": [
     [
@@ -47,8 +47,8 @@ module.exports = {
         "items": [
           {
             "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
+            "link": "https://github.com/only-tao",
+            "icon": "link-github"
           }
         ]
       }
