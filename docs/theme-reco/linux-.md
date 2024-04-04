@@ -300,6 +300,10 @@ git submodule update
 
 #删除分支
 git branch -d local_branch_name
+
+git push -u origin master
+git remote add origin https://github.com/username/repository.git
+git remote set-url origin https://github.com/username/repository.git
 ```
 
 
