@@ -335,3 +335,60 @@ print("TensorFlow version:", tf.__version__)
 https://numpy.org/devdocs/release/1.20.0-notes.html  numpy 1.20.0 deprecate the np."type" => "type"
 
 ![](images/image.png)
+
+
+## tensorboard
+tensorboardX 是一个用于可视化机器学习实验的库，它是 torch.utils.tensorboard 的一个替代品，提供了更多的功能和更好的性能。它允许你将训练过程中的各种数据（如损失函数、准确度、模型参数等）记录下来，并使用 TensorBoard 这个强大的可视化工具进行查看。
+
+以下是如何使用 tensorboardX 的基本步骤：
+
+安装：如果尚未安装 tensorboardX，可以通过 pip 安装：
+```
+pip install tensorboardX
+```
+创建 SummaryWriter 实例：在代码中，首先需要创建一个 SummaryWriter 的实例。这通常在实验的开始处完成，并且可以指定日志文件的保存目录。
+```
+from tensorboardX import SummaryWriter
+```
+创建一个SummaryWriter实例（默认保存在runs目录下）
+```python
+writer = SummaryWriter()
+```
+或者，可以指定一个自定义的日志目录：
+```
+writer = SummaryWriter('path/to/logdir')
+```
+记录数据：在训练循环中，您可以使用 SummaryWriter 实例来记录各种数据。tensorboardX 支持多种数据类型的记录，例如标量（scalars）、图像（images）、文本（text）、音频（audio）和模型图（graphs）。
+
+记录标量数据（例如损失）：
+```python
+for epoch in range(num_epochs):
+    loss = train_model()
+    # 记录损失函数
+    writer.add_scalar('loss', loss, epoch)
+```
+记录图像数据：
+假设img_tensor是一个形状为[3, H, W]的torch.Tensor
+```python
+writer.add_image('my_image', img_tensor, epoch)
+```
+记录模型结构和权重：
+```
+writer.add_graph(model, input_to_model)
+```
+关闭 SummaryWriter：在所有数据记录完成后，确保关闭 SummaryWriter 实例以释放资源。
+```
+writer.close()
+```
+### 之后安装 tensorboard
+
+```python
+conda install -c conda-forge tensorboard # or pip install tensorboard
+conda list tensorboard # check the version
+```
+
+启动 TensorBoard：在命令行中，您可以使用以下命令启动 TensorBoard：
+```
+tensorboard --logdir=path/to/logdir
+```
+然后，打开您的网络浏览器并访问 TensorBoard 提供的 URL（通常是 localhost:6006）来查看可视化结果。
