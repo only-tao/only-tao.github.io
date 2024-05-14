@@ -95,7 +95,7 @@ tmux attach -t mysession：附加到名为“mysession”的会话
 
 * 你可以分离 tmux 会话，使其在后台运行。按下 Ctrl-b d 可以分离当前会话。要重新附加到会话，可以运行 tmux attach-session 命令，后跟会话的名称或编号。
 
-![](images/image-1.png)
+![](./images/image-1.png)
 
 * Press "ctrl+b" exit the mode ("read mode")
 

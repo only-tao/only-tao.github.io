@@ -7,8 +7,12 @@
     "build": "vuepress build ."
   },
   "devDependencies": {
+    "katex": "^0.16.10",
     "vuepress": "1.9.7",
     "vuepress-theme-reco": "1.6.17"
   },
-  "description": "test-recoooooo"
+  "description": "test-recoooooo",
+  "dependencies": {
+    "markdown-it-texmath": "^1.0.0"
+  }
 }

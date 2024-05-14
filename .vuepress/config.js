@@ -16,7 +16,13 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
+    ['link', {rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css'}],
+    ['link', {rel:'stylesheet', href:'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.css'}],
+    ['script', {src: 'https://github.com/markdown-it/markdown-it/blob/master/bin/markdown-it.js'}],
+    ['script', {src: 'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.js'}],
+    ['script', {src: 'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js'}]
+
   ],
   "theme": "reco",
   "themeConfig": {
@@ -101,7 +107,26 @@ module.exports = {
     "record": "xxxx",
     "startYear": "2017"
   },
-  "markdown": {
-    "lineNumbers": true
+  markdown: {
+    lineNumbers: true,
+    anchor: { permalink: false },
+    toc: {includeLevel: [1,2]},
+    extendMarkdown: md => {
+      md.use(require('markdown-it-texmath'))
+    }
   }
+
+
+  // "markdown": {
+  //   // "katex": true,
+  //   "lineNumbers": true,
+  //   extendMarkdown: md => {
+  //     md.use(require('markdown-it-katex'),{
+  //       throwOnError: false,
+  //       errorColor: ' #cc0000'
+  //     });
+  //   }
+   
+  // }
+  
 }
